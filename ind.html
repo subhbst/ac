@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Account Management System</h1>
+    
+    <div id="registerForm">
+        <h2>Register Account</h2>
+        <div class="form-group">
+            <label for="userId">User ID:</label>
+            <input type="text" id="userId" name="userId">
+        </div>
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <div class="form-group">
+            <label for="securityQuestion">Security Question:</label>
+            <select id="securityQuestion" name="securityQuestion">
+                <option value="childhoodHero">Who is your childhood hero?</option>
+                <option value="petName">What is your pet's name?</option>
+                <option value="dreamCar">What is your dream car?</option>
+                <option value="favoriteHobby">What is your favorite hobby?</option>
+                <option value="favoriteColor">What is your favorite color?</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="securityAnswer">Answer:</label>
+            <input type="text" id="securityAnswer" name="securityAnswer">
+        </div>
+        <button onclick="registerAccount()">Register</button>
+        <p id="registerError" class="error"></p>
+    </div>
+    
+    <div id="loginForm" style="display: none;">
+        <h2>Login Account</h2>
+        <div class="form-group">
+            <label for="loginEmail">Email:</label>
+            <input type="text" id="loginEmail" name="loginEmail">
+        </div>
+        <div class="form-group">
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword">
+        </div>
+        <button onclick="loginAccount()">Login</button>
+        <p id="loginError" class="error"></p>
+    </div>
+    
+    <div id="forgotPasswordForm" style="display: none;">
+        <h2>Forgot Password</h2>
+        <div class="form-group">
+            <label for="forgotEmail">Registered Email:</label>
+            <input type="text" id="forgotEmail" name="forgotEmail">
+        </div>
+        <button onclick="resetPassword()">Reset Password</button>
+        <p id="resetPasswordError" class="error"></p>
+    </div>
+    
+    <div id="forgotEmailForm" style="display: none;">
+        <h2>Forgot Email</h2>
+        <div class="form-group">
+            <label for="userIdReminder">User ID:</label>
+            <input type="text" id="userIdReminder" name="userIdReminder">
+        </div>
+        <button onclick="remindEmail()">Get Email</button>
+        <p id="remindEmailError" class="error"></p>
+    </div>
+    
+</div>
+
+
+
+<div style="text-align: center; margin-top: 20px;">
+    <button onclick="showRegisterForm()">Register Account</button>
+    <button onclick="showLoginForm()">Login Account</button>
+    <button onclick="showForgotPasswordForm()">Forgot Password</button>
+    <button onclick="showForgotEmailForm()">Forgot Email</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
